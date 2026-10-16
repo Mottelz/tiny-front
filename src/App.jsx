@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import ClickCounter from './components/ClickCounter'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>Coming Soon</h1>
+    <>
+      <h1>Coming Soon</h1>
+      <ClickCounter />
+    </>
   )
 }
 
