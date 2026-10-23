@@ -1,10 +1,27 @@
-import ClickCounter from './components/ClickCounter'
+import PostList from "./components/PostList"
 
 function App() {
+  const posts = [
+    {
+      id: 1,
+      title: "Post 1",
+      body: "This is the first post."
+    },
+    {
+      id: 2,
+      title: "Post 2",
+      body: "This is the second post."
+    },
+    {
+      id: 3,
+      title: "Post 3",
+      body: "This is the third post."
+    },
+  ]
+
   return (
     <>
-      <h1>Coming Soon</h1>
-      <ClickCounter />
+    <PostList posts={posts} />
     </>
   )
 }
