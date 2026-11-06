@@ -20,20 +20,27 @@ function NewPostForm({ onAdd }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow p-6 space-y-4">
             <input
-                placeholder="Title" 
-                value={title} 
+                className="w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                placeholder="Title"
+                value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            <br />
-            <textarea 
+            <textarea
+                className="w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                rows={4}
                 placeholder="What do you want to share with the void?"
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
-            /><br />
-            {error && <><p>{error}</p></>}
-            <button type="submit">Add Post</button>
+            />
+            {error && <p className="text-sm text-red-600">{error}</p>}
+            <button
+                type="submit"
+                className="block ml-auto bg-indigo-600 text-white font-medium rounded-lg px-4 py-2 hover:bg-indigo-700"
+            >
+                Add Post
+            </button>
         </form>
     )
 }

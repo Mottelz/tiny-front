@@ -34,10 +34,13 @@ function App() {
     }
 
   return (
-    <>
-    <NewPostForm onAdd={onAdd} />
-    <PostList posts={posts} onDelete={onDelete} />
-    </>
+    <div className="min-h-screen bg-slate-100">
+      <main className="mx-auto max-w-2xl p-6 space-y-6">
+        <h1 className="text-3xl font-bold text-slate-800">tiny</h1>
+        <NewPostForm onAdd={onAdd} />
+        <PostList posts={posts} onDelete={onDelete} />
+      </main>
+    </div>
   )
 }
 
